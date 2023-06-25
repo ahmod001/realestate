@@ -1,6 +1,7 @@
 'use client'
+import SearchBar from '@/Components/Search/SearchBar/SearchBar';
 import { Add } from '@mui/icons-material';
-import { Button, Container, useMediaQuery } from '@mui/material';
+import { Container, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 
@@ -8,8 +9,7 @@ const Hero = () => {
     // Media Query
     const isMediumScreen = useMediaQuery('(max-width: 1024px)');
     return (
-        <section style={{ backgroundImage: `url(${'/hero_bg.png'})`, backgroundSize: 'cover' }}
-            className=' pt-20 pb-10'>
+        <section style={{ backgroundImage: `url(${'/hero_bg.png'})`, backgroundSize: 'cover' }} className=' pt-20'>
             <Container>
                 <div className='sm:grid sm:grid-cols-5 lg:grid-cols-2 flex flex-col gap-5'>
                     <div className='col-span-1 sm:col-span-3 lg:col-span-1 pt-3.5 flex items-center'>
@@ -51,8 +51,8 @@ const Hero = () => {
                     </div>
 
                     {/* Hero Img */}
-                    <div className='col-span-1 sm:col-span-2 lg:col-span-1 justify-center flex items-center'>
-                        <div className='lg:h-[30rem] lg:w-[26rem] md:h-[24.5rem] sm:h-[20rem] h-[18rem] w-7/12 sm:w-full relative'>
+                    <div className='col-span-1 sm:col-span-2  lg:col-span-1 justify-center flex items-baseline'>
+                        <div className='lg:h-[32rem] lg:w-[28rem] md:h-[24.5rem] sm:h-[20rem] h-[18rem] w-7/12 sm:w-full relative'>
                             <Image
                                 src='/hero_building.png'
                                 fill
@@ -64,6 +64,9 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* SearchBar */}
+                <SearchBar/>
             </Container>
         </section>
 

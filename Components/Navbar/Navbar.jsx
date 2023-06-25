@@ -1,8 +1,7 @@
 "use client"
-import React from 'react';
+import React, { useEffect,  useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
@@ -12,11 +11,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { Container, useMediaQuery } from '@mui/material';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 
 const drawerWidth = 240;
 const navItems = [
@@ -29,6 +26,7 @@ const navItems = [
 const Navbar = (props) => {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [isNavbarElevated, setIsNavbarElevated] = useState(false);
 
     // Media Query
     const isXsScreen = useMediaQuery('(max-width:640px)');
@@ -37,7 +35,7 @@ const Navbar = (props) => {
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
-
+console.log(window?.scrollY);
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             {/* Brand Icon */}
@@ -72,7 +70,7 @@ const Navbar = (props) => {
         <Box sx={{ display: 'flex' }}>
             <AppBar
                 position="fixed"
-                sx={{ boxShadow: 'none', backdropFilter: 'blur(8px)', backgroundColor: 'transparent' }}
+                sx={{ boxShadow: 'none', backdropFilter: 'blur(8px)', backgroundColor: isNavbarElevated ? 'rgba(255, 255, 255, 0.4)' : 'transparent' }}
                 component="nav">
                 <Container disableGutters>
                     <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
