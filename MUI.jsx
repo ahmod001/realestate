@@ -20,6 +20,9 @@ const theme = createTheme({
         text: {
             main: '#787A7E', // Gray
         },
+        light: {
+            main: "#FFFFFF" // white
+        },
         mode: 'light',
         typography: {
             fontFamily: 'Lexend, sans-serif',

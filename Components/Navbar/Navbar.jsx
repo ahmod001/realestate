@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect,  useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -26,7 +26,6 @@ const navItems = [
 const Navbar = (props) => {
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
-    const [isNavbarElevated, setIsNavbarElevated] = useState(false);
 
     // Media Query
     const isXsScreen = useMediaQuery('(max-width:640px)');
@@ -35,7 +34,7 @@ const Navbar = (props) => {
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
     };
-console.log(window?.scrollY);
+
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             {/* Brand Icon */}
@@ -70,7 +69,7 @@ console.log(window?.scrollY);
         <Box sx={{ display: 'flex' }}>
             <AppBar
                 position="fixed"
-                sx={{ boxShadow: 'none', backdropFilter: 'blur(8px)', backgroundColor: isNavbarElevated ? 'rgba(255, 255, 255, 0.4)' : 'transparent' }}
+                sx={{ boxShadow: 'none', backdropFilter: 'blur(16px)', backgroundColor: 'transparent' }}
                 component="nav">
                 <Container disableGutters>
                     <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
