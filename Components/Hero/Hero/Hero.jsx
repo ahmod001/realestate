@@ -6,8 +6,6 @@ import Image from 'next/image';
 import React from 'react';
 
 const Hero = () => {
-    // Media Query
-    const isMediumScreen = useMediaQuery('(max-width: 1024px)');
     return (
         <section>
             <section style={{ backgroundImage: `url(${'/hero_bg.png'})`, backgroundSize: 'cover' }} className='pt-20'>
