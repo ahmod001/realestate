@@ -1,10 +1,29 @@
+import CustomerReviews from "@/Components/CustomerReviews/CustomerReviews";
+import LoadingReviews from "@/Components/CustomerReviews/loadingReviews/LoadingReviews";
 import DataSecurity from "@/Components/DataSecurity/DataSecurity";
 import Hero from "@/Components/Hero/Hero/Hero";
 import OurClients from "@/Components/OurClients/OurClients";
 import OurFeatures from "@/Components/OurFeatures/OurFeatures";
 import SubscribeUs from "@/Components/SubscribeUs/SubscribeUs";
+import { Suspense } from "react";
+
+// SEO
+export const metadata = {
+  title: 'Realhome: Seamless Property Solutions',
+  description: 'Discover and secure your dream property effortlessly with Realhome. Explore, buy, and book premium real estate listings for a seamless experience.'
+}
 
 export default function Home() {
+  const fetchUsers = async () => {
+    const res = await fetch('https://randomuser.me/api/?results=6');
+    if (res.ok) {
+      const user = await res.json();
+      return user.results;
+    } else {
+      throw new Error('failed to fetch users')
+    }
+  }
+
   return (
     <section className="pb-10 animate sm:space-y-6 space-y-3 min-h-screen">
       <Hero />
@@ -12,7 +31,11 @@ export default function Home() {
         <OurClients />
         <OurFeatures />
         <DataSecurity />
-        <SubscribeUs/>
+        <Suspense fallback={<LoadingReviews />}>
+          <CustomerReviews
+            users={fetchUsers()} />
+          <SubscribeUs />
+        </Suspense>
       </div>
     </section>
   )

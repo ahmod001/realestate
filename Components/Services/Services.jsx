@@ -1,10 +1,10 @@
 "use client"
 import React from 'react';
 import Typography from '@mui/material/Typography';
-import { Container, Icon } from '@mui/material';
+import { Container} from '@mui/material';
 import { Apartment, Assessment, Gavel, Home, Insights, ManageHistory, Search } from "@mui/icons-material";
 
-const ServicesPage = () => {
+const Services = () => {
     const services = [
         {
             title: 'Property Listing',
@@ -45,42 +45,40 @@ const ServicesPage = () => {
     ];
 
     return (
-        <div className=" min-h-screen py-20 flex items-center">
-            <Container className='animate'>
-                <div className='mb-7'>
-                    {/* Title */}
-                    <h1 className="xl:text-4xl lg:text-3xl text-2xl text-center text-gray-800 font-semibold mb-5">
-                        Our Services
-                    </h1>
+        <Container className='animate'>
+            <div className='mb-7'>
+                {/* Title */}
+                <h1 className="xl:text-4xl lg:text-3xl text-2xl text-center text-gray-800 font-semibold mb-5">
+                    Our Services
+                </h1>
 
-                    {/* Description */}
-                    <p className=" lg:text-base text-sm text-center text-gray-600">
-                        We offer a range of services to help you buy, sell, or rent your property.
-                    </p>
-                </div>
+                {/* Description */}
+                <p className=" lg:text-base text-sm text-center text-gray-600">
+                    We offer a range of services to help you buy, sell, or rent your property.
+                </p>
+            </div>
 
-                {/* Service cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-                    {services.map((service, index) => (
-                        <div key={index} className="bg-white p-4 rounded-md hover:shadow-sm hover:bg-gray-50/20 transition-all duration-40">
-                            {/* Icon */}
-                            <div className="flex items-center justify-center h-10 w-10 bg-blue-100 rounded-md lg:mb-6 mb-5">
-                                {service.icon}
-                            </div>
-                            {/* Title */}
-                            <Typography variant="h6" gutterBottom>
-                                {service.title}
-                            </Typography>
-                            {/* Description */}
-                            <Typography textAlign={'justify'} variant="body2" color="textSecondary">
-                                {service.description}
-                            </Typography>
+            {/* Service cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                {services.map((service, index) => (
+                    <div key={index} className="bg-white p-4 rounded-md hover:shadow-sm hover:bg-gray-50/20 transition-all duration-40">
+                        {/* Icon */}
+                        <div className="flex items-center justify-center h-10 w-10 bg-blue-100 rounded-md lg:mb-6 mb-5">
+                            {service.icon}
                         </div>
-                    ))}
-                </div>
-            </Container>
-        </div>
+                        {/* Title */}
+                        <Typography variant="h6" gutterBottom>
+                            {service.title}
+                        </Typography>
+                        {/* Description */}
+                        <Typography textAlign={'justify'} variant="body2" color="textSecondary">
+                            {service.description}
+                        </Typography>
+                    </div>
+                ))}
+            </div>
+        </Container>
     );
 };
 
-export default ServicesPage;
+export default Services;

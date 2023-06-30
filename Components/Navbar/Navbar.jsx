@@ -18,8 +18,8 @@ import Link from 'next/link';
 const drawerWidth = 240;
 const navItems = [
     { id: 0, name: 'Home', href: '/' },
-    { id: 1, name: 'Product', href: '/product' },
-    { id: 2, name: 'Service', href: '/service' },
+    { id: 1, name: 'Products', href: '/products' },
+    { id: 2, name: 'Services', href: '/services' },
     { id: 3, name: 'About Us', href: '/about-us' }
 ]
 

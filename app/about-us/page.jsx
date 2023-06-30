@@ -1,5 +1,11 @@
 import Image from "next/image";
 
+// SEO
+export const metadata={
+    title:'Realhome: About us',
+    description:'Explore thousands of properties with extensive listings. Use advanced search filters to find your ideal property. Trust our expert agents for personalized support. Enjoy a user-friendly interface for seamless property management'
+}
+
 const AboutPage = () => {
     const whyUs = [{
         title: 'Extensive Property Listings', description: `With thousands of properties listed on our platform, you'll have access to a wide range of options.From luxurious penthouses to cozy family homes, we have something for everyone.`
