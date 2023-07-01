@@ -12,7 +12,7 @@ const DataSecurity = () => {
     const isMediumScreen = useMediaQuery('(min-width: 768px) and (max-width: 1024px)');
     return (
         <Container>
-            <div className='grid gap-y-5 md:grid-cols-2 grid-cols-1'>
+            <div className='grid gap-y-6 md:grid-cols-2 grid-cols-1'>
                 <div className="flex items-center">
                     <div className='lg:space-y-6 sm:space-y-4 space-y-5'>
                         <div className='lg:space-y-5 md:space-y-3 space-y-3.5'>
@@ -30,7 +30,7 @@ const DataSecurity = () => {
                         {/* #Extra Security */}
                         <div className='space-y-3'>
                             {/* Title */}
-                            <h3 className="lg:text-xl text-lg text-gray-800 font-semibold mb-2">
+                            <h3 className="lg:text-xl sm:text-lg text-gray-800 font-semibold sm:mb-2">
                                 Extra Security
                             </h3>
 

@@ -52,6 +52,7 @@ const LoadingReviews = () => (
     </Container>
 )
 
+// Card Skeleton
 const ReviewCardSkeleton = () => (
     <div className='mx-auto cursor-pointer px-6 md:px-6 sm:px-4 py-4 md:space-y-3 sm:space-y-2.5 space-y-3.5 w-full max-w-[33rem]'>
         <div className='grid grid-cols-5 gap-x-3.5 sm:gap-x-5 md:gap-x-3.5 lg:gap-x-6'>
