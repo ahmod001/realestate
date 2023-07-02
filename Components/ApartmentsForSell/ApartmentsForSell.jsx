@@ -13,7 +13,7 @@ const ApartmentsForSell = () => {
         <Container>
             <div className='lg:space-y-7 space-y-5'>
                 {/* title */}
-                <h1 className='lg:text-3xl sm:text-2xl text-xl font-semibold tracking-wide'>
+                <h1 className='lg:text-3xl text-2xl font-semibold tracking-wide'>
                     Our Apartment  <br /> For selling
                 </h1>
 

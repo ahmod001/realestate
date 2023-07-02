@@ -2,19 +2,26 @@
 import React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
-import { Box, Button, CardActions } from '@mui/material';
+import { Box, Button, CardActionArea, CardActions } from '@mui/material';
 import Image from 'next/image';
-import { Bathtub, Hotel, SquareFoot } from '@mui/icons-material';
+import { Bathtub, Hotel, LocationOn, SquareFoot } from '@mui/icons-material';
+import { useRouter } from 'next/navigation';
 
-const PropertyCard = ({ property: { id, location, img, price, bedrooms, bathrooms, roomSize } }) => {
+const PropertyCard = ({ property: { id, title, location, img, price, bedrooms, bathrooms, roomSize } }) => {
+
+    const router = useRouter();
     return (
         <div className='flex justify-center'>
-            <Card sx={{ maxWidth: 330, width: '100%' }}>
-                    {/* Image */ }
+            <Card
+                onClick={() => router.push(`/properties/${id}`)}
+                sx={{ maxWidth: 330, width: '100%' }}>
+                <CardActionArea>
+                    {/* Image */}
                     <div className='relative w-full lg:h-[16.5rem] h-[15rem]'>
                         <Image
                             fill
                             sizes={'100vh'}
+                            quality={75}
                             className='bg-cover bg-top'
                             alt='apartment'
                             loading='lazy'
@@ -23,12 +30,16 @@ const PropertyCard = ({ property: { id, location, img, price, bedrooms, bathroom
                     </div>
                     <CardContent>
                         <div className='space-y-3.5'>
-                            {/* Price */}
-                            <h5 className='text-blue-500 font-semibold text-xl'>$ {price.string}</h5>
+                            <div className='space-y-2.5'>
+                                {/* Price */}
+                                <h5 className='text-blue-500 font-semibold text-xl'>$ {price.string}</h5>
+                            </div>
 
                             {/* Address */}
-                            <p className='lg:text-base m-0 text-gray-800 text-sm'>
-                                {location}
+                            <p className=' m-0 lg:text-base text-gray-800 text-sm'>
+                                <LocationOn color='action'
+                                    className='mb-0.5'
+                                    fontSize='inherit' /> {location}
                             </p>
 
                             {/* Features */}
@@ -66,19 +77,7 @@ const PropertyCard = ({ property: { id, location, img, price, bedrooms, bathroom
                             </div>
                         </div>
                     </CardContent>
-                <CardActions>
-                    {/* Book Now Btn */}
-                    <Box sx={{ width: '100%', bgcolor: '#3F86FA' }}>
-                        <Button
-                            size="small"
-                            fullWidth
-                            sx={{ textTransform: 'capitalize' }}
-                            variant='contained'
-                            color="primary">
-                            Book Now
-                        </Button>
-                    </Box>
-                </CardActions>
+                </CardActionArea>
             </Card>
 
         </div>

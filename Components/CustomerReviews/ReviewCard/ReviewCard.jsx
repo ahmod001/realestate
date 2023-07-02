@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-const ReviewCard = ({ user }) => {
+const ReviewCard = async ({ user }) => {
     const { name, picture, location: { country } } = user;
 
     return (
