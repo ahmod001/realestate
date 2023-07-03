@@ -11,11 +11,25 @@ export const generateMetadata = ({ params: { id } }) => {
     }
 }
 
-const page = ({ params: { id } }) => {
+const page = async ({ params: { id } }) => {
+
+    // Get Random agent
+    const fetchAgent = async () => {
+        const res = await fetch('https://randomuser.me/api/?gender=female');
+        if (res.ok) {
+            const agent = await res.json();
+            return agent.results[0];
+        } else {
+            throw new Error('Agent fetch failed')
+        }
+    }
+    const agent = await fetchAgent();
 
     return (
-        <section className='h-screen py-16'>
-            <PropertyDetails property={getProperty(id)} />
+        <section className='min-h-screen animate py-20'>
+            <PropertyDetails
+                agent={agent}
+                property={getProperty(id)} />
         </section>
     );
 };
