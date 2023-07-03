@@ -60,7 +60,7 @@ const ScheduleTour = () => {
                             })}
                             defaultValue={defaultValue[field?.label.toLowerCase()]}
                             inputProps={field.label.toLowerCase() === 'phone' ? {
-                                type: 'tel',
+                                type: 'number',
                             } : {}}
                             error={Boolean(errors[field.label.toLowerCase()])}
                             helperText={errors[field.label.toLowerCase()]?.message}
