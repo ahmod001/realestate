@@ -14,6 +14,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import { Container, useMediaQuery } from '@mui/material';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 const drawerWidth = 240;
 const navItems = [
@@ -30,6 +32,8 @@ const Navbar = (props) => {
     // Media Query
     const isXsScreen = useMediaQuery('(max-width:640px)');
 
+    const { data: session } = useSession();
+    const router = useRouter()
     // Drawer_Toggle Btn Handler
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
@@ -39,8 +43,7 @@ const Navbar = (props) => {
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             {/* Brand Icon */}
             <Box sx={{ my: 3 }}>
-                <img
-                    className='max-h-7 mx-auto'
+                <img className='max-h-7 mx-auto'
                     src="/logo.png"
                     alt="Realhome." />
             </Box>
@@ -96,8 +99,7 @@ const Navbar = (props) => {
 
                         <div className='flex items-center md:space-x-4 space-x-3'>
                             {/* Nav-links */}
-                            <Box
-                                sx={{ display: { xs: 'none', md: 'block' } }}>
+                            <Box sx={{ display: { xs: 'none', md: 'block' } }}>
                                 <div className='flex md:space-x-4 space-x-3'>
                                     {navItems.map(item => (
                                         <Link
@@ -114,25 +116,26 @@ const Navbar = (props) => {
                                 </div>
                             </Box>
 
-                            {/* Buttons */}
-                            <div className='sm:space-x-4 space-x-2.5'>
-                                {/* Log-in btn */}
+                            {session ?
+                                //  Log-out btn
                                 <Button
-                                    size={isXsScreen ? 'small' : 'medium'}
+                                onClick={() => signOut()}
+                                    variant='outlined'
                                     color='secondary'
-                                    sx={{ textTransform: 'capitalize' }}>
-                                    Log In
+                                    size={isXsScreen ? 'small' : 'medium'}
+                                    sx={{ textTransform: 'capitalize', borderRadius: 0, width: { md: '6.3rem', xs: '5rem' }, whiteSpace: 'nowrap' }}>
+                                    Log Out
                                 </Button>
 
-                                {/* Sign Up btn */}
-                                <Button
+                                //  Join-us btn 
+                                : <Button
+                                    onClick={() => router.push('/join-us')}
                                     variant='outlined'
                                     color='primary'
                                     size={isXsScreen ? 'small' : 'medium'}
                                     sx={{ textTransform: 'capitalize', borderRadius: 0, width: { md: '6.3rem', xs: '5rem' }, whiteSpace: 'nowrap' }}>
-                                    Sign Up
-                                </Button>
-                            </div>
+                                    Join us
+                                </Button>}
                         </div>
                     </Toolbar>
                 </Container>

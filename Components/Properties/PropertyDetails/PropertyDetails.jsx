@@ -24,7 +24,7 @@ const PropertyDetails = ({ agent, property }) => {
                         </h3>
                     </div>
                     {/* Price */}
-                    <h1 className='lg:text-2xl md:text-xl text-gray-800 sm:text-lg md:text-end text-start font-medium tracking-wide'>
+                    <h1 className='lg:text-2xl md:text-xl text-gray-800 text-lg md:text-end text-start font-medium tracking-wide'>
                         Price:  {string}$
                     </h1>
                 </header>
