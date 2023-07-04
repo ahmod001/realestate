@@ -91,14 +91,14 @@ const LogIn = () => {
                                         ),
                                     }}
                                 />
+
                                 {/* Login error */}
                                 {isLoginError && (
                                     <Fade in={isLoginError}>
                                         <p className=' inline-block text-red-600 text-sm'>
                                             <Error fontSize='inherit' /> User was not found
                                         </p>
-                                    </Fade>)
-                                }
+                                    </Fade>)}
                             </div>
 
                             {/* Submit-btn */}
