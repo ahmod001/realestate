@@ -1,5 +1,4 @@
 # Realhome: Seamless Property Solution
-
 Realhome is a modern and user-friendly real estate selling application built using Next.js 13.4. It allows users to easily browse and book properties, as well as request inquiries. The application features a seamless user interface, with support for server-side rendering and SEO optimization.
 
 ## Key Features
@@ -16,9 +15,10 @@ Realhome is a modern and user-friendly real estate selling application built usi
 
 - **Styling**: Realhome's user interface is meticulously designed to offer a minimalist and visually appealing experience. The combination of Material-UI (Mui) and Tailwind CSS frameworks enables a sleek and modern design. The application's aesthetic presentation ensures an immersive experience for users while browsing and interacting with the platform.
 
-## Live Demo
 
-Check out the live demo of Realhome: [Realhome Demo](https://realehome.vercel.app/)
+## Live Demo
+![Realestate-mockup](https://github.com/ahmod001/realestate/assets/121039395/c676e022-a5de-40fc-b86f-d9806ba66843)
+Check out the live demo of Realhome: [Realhome Demo](https://realehome.vercel.app)
 
 ## Technologies Used
 
@@ -41,7 +41,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-Special thanks to the UI designer, [-](https://www.behance.net/DesignAxen?fbclid=IwAR3qIu-zVNheaFgqoT686xVv2cQbZijEYDb8wTBKSbaeSISL07UIWI3SR9U), for his invaluable contributions to the visual aesthetics of the Grocery App.
+Thanks to <a href="mailto:uixyeasin@gmail.com">UIYeasin</a> for his outstanding design contribution to this project.
 
 
 
