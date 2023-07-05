@@ -1,4 +1,3 @@
-import LogIn from '@/Components/LogIn/LogIn';
 import dynamic from 'next/dynamic';
 import React from 'react';
 const LogIn = dynamic(()=> import('@/Components/LogIn/LogIn'))
