@@ -12,9 +12,11 @@ export default function RootLayout({ children }) {
       <MUIProvider>
         <NextAuthProvider>
           <body className={lexend.className}>
-            <Navbar />
-            {children}
-            <Footer />
+            <main className='min-h-screen'>
+              <Navbar />
+              {children}
+              <Footer />
+            </main>
           </body>
         </NextAuthProvider>
       </MUIProvider>

@@ -58,10 +58,10 @@ const DataSecurity = () => {
                 <div className='flex order-first md:order-none md:items-end md:justify-end justify-center'>
                     <div className='relative sm:w-11/12 w-full md:max-w-none max-w-[21rem] h-[19rem] sm:h-[21rem] xl:h-[32rem] md:h-[21rem] lg:h-[29rem]'>
                         <Image fill
-                            unoptimized
-                            priority
+                        loading='lazy'
                             placeholder='blur'
                             alt='features'
+                            sizes='100vh'
                             blurDataURL={'/insurance_building.png'}
                             src={'/insurance_building.png'} />
                     </div>

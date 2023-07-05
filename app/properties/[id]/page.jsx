@@ -1,13 +1,14 @@
 import PropertyDetails from '@/Components/Properties/PropertyDetails/PropertyDetails';
 import { apartmentsData, housesData } from '@/store/propertiesData';
+import { redirect} from 'next/navigation';
 import React from 'react';
 
 // SEO
 export const generateMetadata = ({ params: { id } }) => {
     const property = getProperty(id);
     return {
-        title: 'Realhome: ' + property.title,
-        description: property.description
+        title: 'Realhome: ' + property?.title,
+        description: property?.description
     }
 }
 
@@ -24,12 +25,16 @@ const page = async ({ params: { id } }) => {
         }
     }
     const agent = await fetchAgent();
+    const property = getProperty(id);
+    // const router = useRouter();
 
     return (
         <section className='min-h-screen animate py-20'>
-            <PropertyDetails
-                agent={agent}
-                property={getProperty(id)} />
+            {property?
+                <PropertyDetails
+                    agent={agent}
+                    property={property} />
+                : redirect('/404')}
         </section>
     );
 };

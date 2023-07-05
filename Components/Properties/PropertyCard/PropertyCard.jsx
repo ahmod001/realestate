@@ -21,9 +21,8 @@ const PropertyCard = ({ property: { id, title, location, img, price, bedrooms, b
                         <Image
                             fill
                             sizes={'100vh'}
-                            quality={75}
                             className='bg-cover bg-top'
-                            alt='apartment'
+                            alt={title}
                             loading='lazy'
                             placeholder='blur'
                             blurDataURL={img}

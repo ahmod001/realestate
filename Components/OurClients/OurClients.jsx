@@ -12,8 +12,8 @@ const OurClients = () => {
                         <div key={i} className='flex justify-center items-center'>
                             <div className='relative xl:h-11 xl:w-5/12 md:h-8 md:w-5/12 sm:h-8 sm:w-4/12 h-7 w-4/12 lg:h-10'>
                                 <Image fill
-                                    unoptimized={true}
                                     placeholder='blur'
+                                    sizes='100vh'
                                     blurDataURL={`/client_brands/${brand}`}
                                     alt='brand'
                                     src={`/client_brands/${brand}`} />

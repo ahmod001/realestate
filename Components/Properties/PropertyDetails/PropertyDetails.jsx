@@ -5,6 +5,19 @@ import Image from 'next/image';
 import React, { Suspense } from 'react';
 import ScheduleTour from '../ScheduleTour/ScheduleTour';
 
+// const initialProperty = {
+//     id: null,
+//     location: "",
+//     title: "",
+//     price: { int: null, string: '' },
+//     bedrooms: null,
+//     type: '',
+//     bathrooms: null,
+//     roomSize: "",
+//     description: "",
+//     img: "",
+// }
+
 const PropertyDetails = ({ agent, property }) => {
     const { id, title, description, location, img, price: { string }, bedrooms, bathrooms, roomSize } = property;
 
@@ -33,17 +46,14 @@ const PropertyDetails = ({ agent, property }) => {
                     {/* Image of property */}
                     <div className='h-full flex items-center'>
                         <div className='w-full relative md:max-w-none sm:max-w-[37rem] mx-auto h-[22rem] lg:h-[27.5rem] md:h-[22rem] sm:h-[25.5rem]'>
-                            <Image
-                                quality={100}
-                                unoptimized
+                            <Image fill
                                 priority
                                 alt={title}
                                 className='rounded-sm'
                                 placeholder='blur'
                                 blurDataURL={img}
                                 src={img}
-                                sizes='100vh'
-                                fill />
+                                sizes='100vh' />
                         </div>
                     </div>
 

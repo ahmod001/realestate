@@ -50,14 +50,12 @@ const Hero = () => {
                         {/* Hero Img */}
                         <div className='col-span-1 sm:col-span-2 md:col-span-1 justify-end flex items-center'>
                             <div className='xl:h-[32rem] xl:w-[30rem] lg:h-[30rem] lg:w-[28rem] md:w-[24rem] md:h-[25rem] sm:h-[18rem] sm:w-full h-[16rem]  w-[14rem] relative'>
-                                <Image
+                                <Image fill
                                     src='/hero_building.png'
-                                    fill
-                                    quality={100}
+                                    sizes='100vh'
                                     placeholder='blur'
                                     blurDataURL='/hero_building.png'
-                                    priority={true}
-                                    unoptimized={true}
+                                    priority
                                     alt="Sky Scraper" />
                             </div>
                         </div>
