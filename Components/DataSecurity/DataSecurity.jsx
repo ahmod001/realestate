@@ -1,4 +1,5 @@
 "use client"
+import { mainPlaceholderImgData } from '@/store/propertiesData';
 import { Box, Button, Container, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -59,8 +60,10 @@ const DataSecurity = () => {
                     <div className='relative sm:w-11/12 w-full md:max-w-none max-w-[21rem] h-[19rem] sm:h-[21rem] xl:h-[32rem] md:h-[21rem] lg:h-[29rem]'>
                         <Image fill
                         loading='lazy'
+                            placeholder='blur'
                             alt='features'
                             sizes='100vh'
+                            blurDataURL={mainPlaceholderImgData}
                             src={'/insurance_building.png'} />
                     </div>
                 </div>

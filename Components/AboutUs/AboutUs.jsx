@@ -79,6 +79,8 @@ const AboutUs = () => {
                         <div className="relative w-full max-w-[31rem] h-[19.5rem] md:max-w-[40rem] md:h-[26rem]">
                             <Image src='/about-us-house.jpg'
                                 fill sizes='100vh'
+                                placeholder="blur"
+                                blurDataURL={mainPlaceholderImgData}
                                 className="rounded-sm"
                                 priority={true}
                                 alt="beautiful property" />

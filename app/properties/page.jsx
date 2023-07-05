@@ -1,6 +1,6 @@
-import Properties from '@/Components/Properties/Properties';
+import dynamic from 'next/dynamic';
 import React from 'react';
-
+const Properties = dynamic(()=>import('@/Components/Properties/Properties'))
 // SEO
 export const metadata = {
     title: 'Realhome: Properties',

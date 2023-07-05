@@ -5,11 +5,12 @@ import Image from 'next/image';
 import React, { Suspense } from 'react';
 import ScheduleTour from '../ScheduleTour/ScheduleTour';
 import { useRouter } from 'next/navigation';
+import { mainPlaceholderImgData } from '@/store/propertiesData';
 
 const PropertyDetails = ({ agent, property }) => {
-   
+
     const { id, title, description, location, img, price: { string }, bedrooms, bathrooms, roomSize } = property;
-    
+
     const router = useRouter()
     !property && router.push('/')
     return (
@@ -38,11 +39,11 @@ const PropertyDetails = ({ agent, property }) => {
                     <div className='h-full flex items-center'>
                         <div className='w-full relative md:max-w-none sm:max-w-[37rem] mx-auto h-[22rem] lg:h-[27.5rem] md:h-[22rem] sm:h-[25.5rem]'>
                             <Image fill
-                                priority
+                                priority={true}
                                 alt={title}
                                 className='rounded-sm'
                                 placeholder='blur'
-                                blurDataURL={img}
+                                blurDataURL={mainPlaceholderImgData}
                                 src={img}
                                 sizes='100vh' />
                         </div>
