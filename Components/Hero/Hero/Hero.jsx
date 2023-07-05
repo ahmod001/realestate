@@ -55,7 +55,7 @@ const Hero = () => {
                                     sizes='100vh'
                                     placeholder='blur'
                                     blurDataURL='/hero_building.png'
-                                    priority
+                                    priority={true}
                                     alt="Sky Scraper" />
                             </div>
                         </div>

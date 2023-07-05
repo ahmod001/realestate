@@ -1,4 +1,5 @@
 import ApartmentsForSell from "@/Components/ApartmentsForSell/ApartmentsForSell";
+import LoadingApartments from "@/Components/ApartmentsForSell/LoadingApartments/LoadingApartments";
 import CustomerReviews from "@/Components/CustomerReviews/CustomerReviews";
 import LoadingReviews from "@/Components/CustomerReviews/loadingReviews/LoadingReviews";
 import DataSecurity from "@/Components/DataSecurity/DataSecurity";
@@ -31,7 +32,9 @@ export default function Home() {
       <div className="sm:space-y-24 space-y-14">
         <OurClients />
         <OurFeatures />
-        <ApartmentsForSell/>
+        <Suspense fallback={<LoadingApartments />}>
+          <ApartmentsForSell />
+        </Suspense>
         <DataSecurity />
         <Suspense fallback={<LoadingReviews />}>
           <CustomerReviews

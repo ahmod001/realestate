@@ -11,8 +11,8 @@ const OurFeatures = () => {
                 <div className='flex items-center sm:justify-start justify-center'>
                     <div className='relative sm:w-11/12 w-full sm:max-w-none max-w-[21rem] h-[18.5rem] sm:h-[21rem] xl:h-[32rem] md:h-[24rem] lg:h-[29rem]'>
                         <Image fill
-                         sizes='100vh'
-                            priority
+                            sizes='100vh'
+                            priority={true}
                             placeholder='blur'
                             blurDataURL='/features_we_provide_building.png'
                             alt='features'
