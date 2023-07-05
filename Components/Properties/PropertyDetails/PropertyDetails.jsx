@@ -39,7 +39,8 @@ const PropertyDetails = ({ agent, property }) => {
                                 priority
                                 alt={title}
                                 className='rounded-sm'
-                                placeholder='empty'
+                                placeholder='blur'
+                                blurDataURL={img}
                                 src={img}
                                 sizes='100vh'
                                 fill />

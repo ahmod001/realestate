@@ -12,7 +12,7 @@ const ReviewCard = async ({ user }) => {
                     <Image fill
                         unoptimized
                         loading='lazy'
-                        placeholder='empty'
+                        placeholder={picture.small}
                         src={picture.large}
                         alt={name.first} />
                 </div>

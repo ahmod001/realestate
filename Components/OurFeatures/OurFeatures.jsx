@@ -13,7 +13,8 @@ const OurFeatures = () => {
                         <Image fill
                             loading='lazy'
                             unoptimized
-                            placeholder='empty'
+                            placeholder='blur'
+                            blurDataURL='/features_we_provide_building.png'
                             alt='features'
                             src={'/features_we_provide_building.png'} />
                     </div>

@@ -54,7 +54,8 @@ const Hero = () => {
                                     src='/hero_building.png'
                                     fill
                                     quality={100}
-                                    placeholder='empty'
+                                    placeholder='blur'
+                                    blurDataURL='/hero_building.png'
                                     priority={true}
                                     unoptimized={true}
                                     alt="Sky Scraper" />

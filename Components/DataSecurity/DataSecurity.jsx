@@ -42,9 +42,9 @@ const DataSecurity = () => {
 
                         {/* Learn more btn */}
                         <Box bgcolor={'#3F86FA'} width={'fit-content'}>
-                            <Button 
-                            onClick={()=>router.push('/trust-and-security')}
-                            color='primary'
+                            <Button
+                                onClick={() => router.push('/trust-and-security')}
+                                color='primary'
                                 variant='contained'
                                 size={isExtraSmallScreen || isMediumScreen ? 'small' : 'medium'}
                                 sx={{ textTransform: 'capitalize' }} >
@@ -60,8 +60,9 @@ const DataSecurity = () => {
                         <Image fill
                             loading='lazy'
                             unoptimized
-                            placeholder='empty'
+                            placeholder='blur'
                             alt='features'
+                            blurDataURL={'/insurance_building.png'}
                             src={'/insurance_building.png'} />
                     </div>
                 </div>

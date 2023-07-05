@@ -85,7 +85,8 @@ const AboutPage = () => {
                                 <Image src='/about-us-house.jpg'
                                     fill
                                     unoptimized
-                                    placeholder="empty"
+                                    placeholder="blur"
+                                    blurDataURL='/about-us-house.jpg'
                                     className="rounded-sm"
                                     priority
                                     alt="beautiful property" />
