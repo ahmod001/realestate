@@ -6,7 +6,8 @@ import DataSecurity from "@/Components/DataSecurity/DataSecurity";
 import Hero from "@/Components/Hero/Hero/Hero";
 import OurClients from "@/Components/OurClients/OurClients";
 import OurFeatures from "@/Components/OurFeatures/OurFeatures";
-import SubscribeUs from "@/Components/SubscribeUs/SubscribeUs";
+import dynamic from "next/dynamic";
+const SubscribeUs = dynamic(() => import("@/Components/SubscribeUs/SubscribeUs"))
 import { Suspense } from "react";
 
 // SEO
@@ -39,8 +40,8 @@ export default function Home() {
         <Suspense fallback={<LoadingReviews />}>
           <CustomerReviews
             users={fetchUsers()} />
-          <SubscribeUs />
         </Suspense>
+        <SubscribeUs />
       </div>
     </section>
   )

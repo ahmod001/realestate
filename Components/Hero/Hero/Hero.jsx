@@ -1,5 +1,6 @@
 'use client'
 import SearchBar from '@/Components/Search/SearchBar/SearchBar';
+import { mainPlaceholderImgData } from '@/store/propertiesData';
 import { Add } from '@mui/icons-material';
 import { Container, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
@@ -54,7 +55,7 @@ const Hero = () => {
                                     src='/hero_building.png'
                                     sizes='100vh'
                                     placeholder='blur'
-                                    blurDataURL='/hero_building.png'
+                                    blurDataURL={mainPlaceholderImgData}
                                     priority={true}
                                     alt="Sky Scraper" />
                             </div>

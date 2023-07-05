@@ -1,4 +1,5 @@
 "use client"
+import { mainPlaceholderImgData } from '@/store/propertiesData';
 import { Container } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
@@ -14,7 +15,7 @@ const OurFeatures = () => {
                             sizes='100vh'
                             priority={true}
                             placeholder='blur'
-                            blurDataURL='/features_we_provide_building.png'
+                            blurDataURL={mainPlaceholderImgData}
                             alt='features'
                             src={'/features_we_provide_building.png'} />
                     </div>

@@ -6,7 +6,7 @@ import { Box, Button, CardActionArea, CardActions } from '@mui/material';
 import Image from 'next/image';
 import { Bathtub, Hotel, LocationOn, SquareFoot } from '@mui/icons-material';
 import { useRouter } from 'next/navigation';
-import { placeholderImgData } from '@/store/propertiesData';
+import { cardPlaceholderImgData } from '@/store/propertiesData';
 
 const PropertyCard = ({ property: { id, title, location, img, price, bedrooms, bathrooms, roomSize } }) => {
 
@@ -26,7 +26,7 @@ const PropertyCard = ({ property: { id, title, location, img, price, bedrooms, b
                             alt={title}
                             loading='lazy'
                             placeholder='blur'
-                            blurDataURL={placeholderImgData}
+                            blurDataURL={cardPlaceholderImgData}
                             src={img} />
                     </div>
                     <CardContent>

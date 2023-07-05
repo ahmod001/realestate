@@ -1,4 +1,5 @@
 "use client"
+import { mainPlaceholderImgData } from '@/store/propertiesData';
 import { Box, Button, Container, useMediaQuery } from '@mui/material';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
@@ -62,7 +63,7 @@ const DataSecurity = () => {
                             placeholder='blur'
                             alt='features'
                             sizes='100vh'
-                            blurDataURL={'/insurance_building.png'}
+                            blurDataURL={mainPlaceholderImgData}
                             src={'/insurance_building.png'} />
                     </div>
                 </div>
