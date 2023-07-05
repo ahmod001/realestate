@@ -18,7 +18,7 @@ Realhome is a modern and user-friendly real estate selling application built usi
 
 ## Live Demo
 
-Check out the live demo of Realhome: [Realhome Demo](https://realehome-8zvm86jqi-ahmod001.vercel.app)
+Check out the live demo of Realhome: [Realhome Demo](https://realehome.vercel.app/)
 
 ## Technologies Used
 
