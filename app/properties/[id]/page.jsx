@@ -1,7 +1,8 @@
-import PropertyDetails from '@/Components/Properties/PropertyDetails/PropertyDetails';
 import { apartmentsData, housesData } from '@/store/propertiesData';
+import dynamic from 'next/dynamic';
 import { redirect } from 'next/navigation';
 import React from 'react';
+const PropertyDetails = dynamic(()=> import('@/Components/Properties/PropertyDetails/PropertyDetails'))
 
 // SEO
 export const generateMetadata = ({ params: { id } }) => {

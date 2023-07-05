@@ -1,5 +1,6 @@
-import TrustAndSecurity from '@/Components/Trust&Security/Trust&Security';
+import dynamic from 'next/dynamic';
 import React from 'react';
+const TrustAndSecurity = dynamic(()=>import('@/Components/Trust&Security/Trust&Security'))
 
 // SEO
 export const metadata = {

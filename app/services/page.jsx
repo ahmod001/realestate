@@ -1,4 +1,5 @@
-import Services from "@/Components/Services/Services";
+import dynamic from "next/dynamic";
+const Services =dynamic(()=> import("@/Components/Services/Services"))
 
 // SEO
 export const metadata = {
