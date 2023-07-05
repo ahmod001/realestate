@@ -1,7 +1,8 @@
 # Realhome: Seamless Property Solution
+
 Realhome is a modern and user-friendly real estate selling application built using Next.js 13.4. It allows users to easily browse and book properties, as well as request inquiries. The application features a seamless user interface, with support for server-side rendering and SEO optimization.
 
-## Key Features
+## Features
 
 - **Property Listings**: Realhome provides a comprehensive listing of properties available for sale. Users can explore various types of properties such as apartments, houses, and commercial spaces. Each listing includes detailed information about the property, including images, pricing, and specifications.
 
@@ -13,37 +14,30 @@ Realhome is a modern and user-friendly real estate selling application built usi
 
 - **Form Validation**: React Hook Form is employed for efficient and reliable form validation within Realhome. It ensures that user inputs are validated and adhered to according to specified criteria, providing a seamless and error-free experience when interacting with forms throughout the application.
 
-- **Styling**: Realhome's user interface is meticulously designed to offer a minimalist and visually appealing experience. The combination of Material-UI (Mui) and Tailwind CSS frameworks enables a sleek and modern design. The application's aesthetic presentation ensures an immersive experience for users while browsing and interacting with the platform.
-
-
 ## Live Demo
+
 ![Realestate-mockup](https://github.com/ahmod001/realestate/assets/121039395/c676e022-a5de-40fc-b86f-d9806ba66843)
+
 Check out the live demo of Realhome: [Realhome Demo](https://realehome.vercel.app)
 
 ## Technologies Used
 
-Realhome incorporates a range of technologies to deliver its functionality and design:
+Realhome incorporates the following technologies:
 
-- **Next.js 13.4**: Next.js serves as the core framework for Realhome, enabling server-side rendering and facilitating the building of efficient and performant web applications. 
+- Next.js 13.4
+- JSON
+- NextAuth
+- React
+- React Hook Form
+- Axios
+- Material-UI (MUI)
+- Tailwind CSS
 
-- **JSON**: Realhome utilizes JSON for storing and managing property data. JSON provides a lightweight and flexible format for structuring property information, making it easy to retrieve and present to users.
-- **NextAuth**: NextAuth is employed for secure credential-based login functionality within Realhome. It ensures that user authentication is handled securely, allowing users to access their accounts and engage with personalized features. 
-
-- **React Hook Form**: Realhome integrates React Hook Form to manage form validation seamlessly. It streamlines the process of form validation, enhancing user experience and reducing the likelihood of errors when submitting forms.
-
-- **Material-UI (Mui) and Tailwind CSS**: Realhome leverages Material-UI (Mui) and Tailwind CSS to achieve a visually pleasing and minimalist design. The combination of these frameworks enables the creation of an aesthetically cohesive user interface.
-
-- **Axios**: Realhome employs Axios, a popular HTTP client, to fetch data from the API. Axios simplifies the process of making asynchronous requests, enabling efficient data retrieval and seamless integration with the application. 
-
-  ## License
+###### License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
+Thanks to [UIYeasin](mailto:uixyeasin@gmail.com) for his outstanding design contribution to this project.
 
-Thanks to <a href="mailto:uixyeasin@gmail.com">UIYeasin</a> for his outstanding design contribution to this project.
-
-
-
-##### ©2023 Developed by Ahmod Hasan
-
+**© 2023 Developed by Ahmod Hasan** 
