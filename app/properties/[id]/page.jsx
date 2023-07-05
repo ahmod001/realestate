@@ -1,6 +1,6 @@
 import PropertyDetails from '@/Components/Properties/PropertyDetails/PropertyDetails';
 import { apartmentsData, housesData } from '@/store/propertiesData';
-import { redirect} from 'next/navigation';
+import { redirect } from 'next/navigation';
 import React from 'react';
 
 // SEO
@@ -26,15 +26,14 @@ const page = async ({ params: { id } }) => {
     }
     const agent = await fetchAgent();
     const property = getProperty(id);
-    // const router = useRouter();
 
     return (
         <section className='min-h-screen animate py-20'>
-            {property?
+            {property ?
                 <PropertyDetails
                     agent={agent}
                     property={property} />
-                : redirect('/404')}
+                : redirect('/')}
         </section>
     );
 };

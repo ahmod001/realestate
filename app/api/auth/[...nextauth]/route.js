@@ -13,6 +13,8 @@ const authOptions = {
                         name: 'John Doe',
                         email: 'john@gmail.com'
                     }
+                } else {
+                    return null;
                 }
             }
         })

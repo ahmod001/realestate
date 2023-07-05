@@ -4,23 +4,14 @@ import { Avatar, Container } from '@mui/material';
 import Image from 'next/image';
 import React, { Suspense } from 'react';
 import ScheduleTour from '../ScheduleTour/ScheduleTour';
-
-// const initialProperty = {
-//     id: null,
-//     location: "",
-//     title: "",
-//     price: { int: null, string: '' },
-//     bedrooms: null,
-//     type: '',
-//     bathrooms: null,
-//     roomSize: "",
-//     description: "",
-//     img: "",
-// }
+import { useRouter } from 'next/navigation';
 
 const PropertyDetails = ({ agent, property }) => {
+   
     const { id, title, description, location, img, price: { string }, bedrooms, bathrooms, roomSize } = property;
-
+    
+    const router = useRouter()
+    !property && router.push('/')
     return (
         <Container>
             <div className='space-y-8'>
