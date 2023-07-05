@@ -25,7 +25,7 @@ const PropertyCard = ({ property: { id, title, location, img, price, bedrooms, b
                             alt={title}
                             loading='lazy'
                             placeholder='blur'
-                            blurDataURL={img}
+                            blurDataURL={'/placeholder.jpg'}
                             src={img} />
                     </div>
                     <CardContent>
