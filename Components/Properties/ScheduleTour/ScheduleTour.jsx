@@ -15,14 +15,6 @@ const ScheduleTour = () => {
         setIsFormSubmitted(!isFormSubmitted)
     }
 
-    // Get default value from the Session storage
-    const defaultValue = JSON.parse(sessionStorage.getItem('real_home_Schedule_tour')) || {
-        "name": "",
-        "phone": "",
-        "email": "",
-        "massage": ""
-    };
-
     return (
         <div className='px-4 space-y-3'>
             {/* Show pop-up after successfully form submitted */}
@@ -58,7 +50,6 @@ const ScheduleTour = () => {
                                 } : {}
 
                             })}
-                            defaultValue={defaultValue[field?.label.toLowerCase()]}
                             inputProps={field.label.toLowerCase() === 'phone' ? {
                                 type: 'number',
                             } : {}}
@@ -75,7 +66,6 @@ const ScheduleTour = () => {
                         label={'Massage'}
                         {...register('massage')}
                         variant='standard'
-                        defaultValue={defaultValue?.massage}
                         fullWidth
                     />
                 </div>
