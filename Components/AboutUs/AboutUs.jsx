@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import { mainPlaceholderImgData } from '@/store/propertiesData';
 
 const AboutUs = () => {
     const whyUs = [{
