@@ -23,6 +23,7 @@ const ApartmentsForSell = () => {
                             // Extra_Small Screen
                             0: {
                                 slidesPerView: 1,
+                                spaceBetween: 10
                             },
                             // Medium Screen
                             640: {

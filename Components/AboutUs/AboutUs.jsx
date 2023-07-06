@@ -29,7 +29,7 @@ const AboutUs = () => {
                 </h1>
                 {/* Description */}
                 <div className="max-w-4xl mx-auto">
-                    <p className="xl:text-lg text-base text-justify text-gray-600">
+                    <p className="xl:text-lg text-sm text-justify text-gray-600">
                         Welcome to <strong>Realhome</strong>, the leading online platform for all your real estate needs.
                         Whether you're looking to buy, rent, or sell apartments and houses, we've got you covered.
                         Our user-friendly interface and extensive listings make it easier than ever to find your dream property.
