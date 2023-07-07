@@ -19,8 +19,7 @@ const ApartmentsForSell = () => {
 
                 <Swiper
                     breakpoints={
-                        {
-                            // Extra_Small Screen
+                        {// Extra_Small Screen
                             0: {
                                 slidesPerView: 1,
                                 spaceBetween: 10
@@ -46,7 +45,7 @@ const ApartmentsForSell = () => {
                     pagination={{
                         clickable: true,
                     }}
-                    className="mySwiper lg:h-[28rem] h-[26rem]">
+                    className="mySwiper lg:h-[28rem] sm:h-[26.5rem] h-[26rem]">
                     {apartmentsData.map(apartment => (
                         <SwiperSlide className='p-1' key={apartment.id}>
                             <PropertyCard property={apartment} />

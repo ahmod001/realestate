@@ -1,3 +1,4 @@
+import { mainPlaceholderImgData } from '@/store/propertiesData';
 import Image from 'next/image';
 import React from 'react';
 
@@ -10,9 +11,10 @@ const ReviewCard = async ({ user }) => {
                 {/* Customer Img */}
                 <div className='relative items-center col-span-2 w-full h-36 sm:h-40 md:h-36 lg:h-40 xl:h-[11rem]'>
                     <Image fill
-                        unoptimized
                         loading='lazy'
-                        placeholder={picture.small}
+                        placeholder='blur'
+                        blurDataURL={mainPlaceholderImgData}
+                        sizes='100vh'
                         src={picture.large}
                         alt={name.first} />
                 </div>
@@ -20,7 +22,7 @@ const ReviewCard = async ({ user }) => {
                     <div className='xl:space-y-4 w-full lg:space-y-3.5 md:space-y-2 sm:space-y-3 space-y-1'>
                         {/* Name */}
                         <h3 className='font-semibold tracking-wide whitespace-nowrap lg:text-2xl md:text-base sm:text-xl text-lg text-gray-800'>
-                            {name.first + ' ' + name.last}
+                            {(name.first + ' ' + name.last).substring(0,14)}
                         </h3>
 
                         <div className='lg:space-y-3 sm:space-y-2 md:space-y-1.5 space-y-1.5'>
